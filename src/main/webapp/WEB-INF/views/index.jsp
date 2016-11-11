@@ -80,7 +80,7 @@ var selectArtist = function(artist) {
 						} else {
 							for ( var i = 0; i < data.length; i++ ) {
 								 
-								if ( data[i].confidence > 0.8 ) {
+								if ( data[i].confidence > 0.85 ) {
 									html += "<li>" + data[i].name + " / " + (data[i].confidence * 100) + "%</li>"								
 								} else {
 									console.debug(data[i].confidence);
