@@ -82,6 +82,8 @@ var selectArtist = function(artist) {
 								 
 								if ( data[i].confidence > 0.85 ) {
 									html += "<li>" + data[i].name + " / " + (data[i].confidence * 100) + "%</li>"								
+								} else if ( data[i].confidence <= 0.85 ) {
+									html += "<li style='color: red;'>" + data[i].name + " / " + (data[i].confidence * 100) + "%, not reliable</li>"
 								} else {
 									console.debug(data[i].confidence);
 								}
