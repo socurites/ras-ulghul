@@ -23,13 +23,13 @@ import com.socurites.rasulghul.web.domain.RasUlGhulPrediction;
 
 @Controller
 public class RasUlGhulWebController {
-	private static final String OPEN_FACE_DIR = "/home/socurites/Runnable/OpenFace/openface/";
-	private static final String MODEL_DIR = "/home/socurites/Backup/MachineLearning/artist_faces/model/generated-embeddings-";
-	private static final String UPLOAD_DIR = "/home/socurites/Works/melon_works/ras-ulghul/src/main/webapp/resources/upload/";
+//	private static final String OPEN_FACE_DIR = "/home/socurites/Runnable/OpenFace/openface/";
+//	private static final String MODEL_DIR = "/home/socurites/Backup/MachineLearning/artist_faces/model/generated-embeddings-";
+//	private static final String UPLOAD_DIR = "/home/socurites/Works/melon_works/ras-ulghul/src/main/webapp/resources/upload/";
 	
-//	private static final String OPEN_FACE_DIR = "/home/ubuntu/OpenFace/openface/";
-//	private static final String MODEL_DIR = "/home/ubuntu/artist_faces/model/generated-embeddings-";
-//	private static final String UPLOAD_DIR = "/home/ubuntu/git/ras-ulghul/src/main/webapp/resources/upload/";
+	private static final String OPEN_FACE_DIR = "/home/ubuntu/OpenFace/openface/";
+	private static final String MODEL_DIR = "/home/ubuntu/artist_faces/model/generated-embeddings-";
+	private static final String UPLOAD_DIR = "/home/ubuntu/git/ras-ulghul/src/main/webapp/resources/upload/";
 	
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
