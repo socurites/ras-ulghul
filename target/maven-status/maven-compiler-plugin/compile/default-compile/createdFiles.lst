@@ -1,0 +1,4 @@
+com/socurites/rasulghul/web/RasUlGhulWebApplication.class
+com/socurites/rasulghul/web/controller/RasUlGhulWebController.class
+com/socurites/rasulghul/web/config/RasUlGhulConfig.class
+com/socurites/rasulghul/web/domain/RasUlGhulPrediction.class
