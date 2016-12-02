@@ -3,6 +3,8 @@
 
 자바진영의 spring-boot 프레임워크를 사용하여 만들었습니다.
 
+관련 내용은 [Popit: #엑소사랑하자 – OpenFace로 우리 오빠들 얼굴 인식하기](http://www.popit.kr/openface-exo-member-face-recognition/)에서 확인할 수 있습니다.
+
 
 ## 설치하기
 우선 프로젝트를 로컬로 clone합니다.
@@ -21,6 +23,18 @@ public class RasUlGhulWebController {
   // 테스트할 이미지를 업로드할 위치
   // 반드시 {RAS_ULGHUL_CLONED_DIRECTORY}/src/main/webapp/resources/upload/로 설정한다.
   private static final String UPLOAD_DIR = "/home/ubuntu/git/ras-ulghul/src/main/webapp/resources/upload/";</pre></code>
+
+...
+
+  @RequestMapping(value = "/infer", method = RequestMethod.GET)
+  @ResponseBody
+  public String infer(@RequestParam("fileName") String fileName, @RequestParam("artist") String artist) throws Exception {
+    // 학습된 모델 위치의 마지막 이름(artist)는 파라미터로 받는다.
+    String command = OPEN_FACE_DIR + "demos/classifier.py infer " + MODEL_DIR + artist + "/classifier.pkl " + UPLOAD_DIR + fileName + " --multi";
+
+    // classifier.py를 실행한다.
+    Process p = Runtime.getRuntime().exec(command);
+
 ```
 
 
